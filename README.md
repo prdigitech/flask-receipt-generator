@@ -2,7 +2,7 @@ Here's a detailed description for your README file:
 
 ---
 
-# Payment Receipt Generator
+# Flask Payment Receipt Generator
 
 ## Overview
 The Payment Receipt Generator is a web application built with Flask that allows users to create and download payment receipts in PDF format. Designed for freelancers and small businesses, this application simplifies the process of generating professional receipts by capturing essential payment information.
