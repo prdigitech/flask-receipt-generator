@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Receipt Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Payment Receipt Generator</h1>
+        <form id="receiptForm">
+            <label for="client_name">Client Name:</label>
+            <input type="text" id="client_name" name="client_name" required>
+
+            <label for="product">Product:</label>
+            <input type="text" id="product" name="product" required>
+
+            <label for="amount">Amount:</label>
+            <input type="text" id="amount" name="amount" required>
+
+            <label for="payment_method">Payment Method:</label>
+            <input type="text" id="payment_method" name="payment_method" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4"></textarea>
+
+            <!-- Buttons side by side -->
+            <div class="button-container">
+                <button type="button" id="generateButton" onclick="generateReceipt()">Generate Receipt</button>
+                <button type="button" id="downloadButton" onclick="downloadReceipt()" style="display: none;">Download as PDF</button>
+            </div>
+        </form>
+
+        <!-- Receipt display area -->
+        <div id="receiptOutput"></div>
+
+        <div class="footer">
+            &copy; 2024 Your Company
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
